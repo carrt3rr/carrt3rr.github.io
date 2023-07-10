@@ -135,5 +135,5 @@ function generateRandomParameters() {
 // Initial rendering of the Mandelbrot set
 generateRandomParameters();
 
-// Update the visualization every 2 seconds
-setInterval(generateRandomParameters, 500);
+// Update the visualization every 1 second
+setInterval(generateRandomParameters, 1000);
