@@ -136,4 +136,4 @@ function generateRandomParameters() {
 generateRandomParameters();
 
 // Update the visualization every 2 seconds
-setInterval(generateRandomParameters, 1);
+setInterval(generateRandomParameters, 500);
