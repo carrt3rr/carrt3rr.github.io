@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   const ball = document.getElementById('ball');
-  const containerWidth = window.innerWidth;
-  const containerHeight = window.innerHeight;
+  const container = document.body;
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
   const ballWidth = ball.offsetWidth;
   const ballHeight = ball.offsetHeight;
 
