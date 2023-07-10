@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 
 const WIDTH = 800;
 const HEIGHT = 600;
-ctx.canvas.width = WIDTH;
-ctx.canvas.height = HEIGHT;
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
 
 const MAX_ITERATIONS = 1000;
 const ZOOM_FACTOR = 0.1;
@@ -34,7 +34,7 @@ function mandelbrotSet(c) {
 
 // Function to render the Mandelbrot set
 function renderMandelbrotSet() {
-  ctx.fillStyle = 'turquoise';
+  ctx.fillStyle = 'rgba(0, 61, 64, 1)'; // Dark shade of cyan
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
   for (let x = 0; x < WIDTH; x++) {
@@ -134,3 +134,4 @@ generateRandomParameters();
 
 // Update the visualization every 1 second
 setInterval(generateRandomParameters, 1000);
+
