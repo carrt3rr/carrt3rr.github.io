@@ -34,6 +34,9 @@ function mandelbrotSet(c) {
 
 // Function to render the Mandelbrot set
 function renderMandelbrotSet() {
+  ctx.fillStyle = 'turquoise';
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
       const real = mapValue(x, 0, WIDTH, REAL_START, REAL_END);
@@ -41,17 +44,11 @@ function renderMandelbrotSet() {
       const c = { real, imaginary };
       const iterations = mandelbrotSet(c);
 
-      // Map the number of iterations to a color
-      const hue = mapValue(iterations, 0, MAX_ITERATIONS, 0, 360);
-      const saturation = 100;
-      const lightness = iterations < MAX_ITERATIONS ? 50 : 0;
-
-      // Convert HSL color to RGB color
-      const rgbColor = hslToRgb(hue, saturation, lightness);
-
-      // Set the pixel color in the canvas
-      ctx.fillStyle = `rgb(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b})`;
-      ctx.fillRect(x, y, 1, 1);
+      if (iterations === MAX_ITERATIONS) {
+        // Set red color for fractal pixels
+        ctx.fillStyle = 'red';
+        ctx.fillRect(x, y, 1, 1);
+      }
     }
   }
 }
