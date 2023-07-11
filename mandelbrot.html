@@ -21,10 +21,21 @@
       outline-offset: -4px;
       margin: 4px;
     }
+
+    #back-to-home {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <canvas id="myCanvas"></canvas>
+
+  <div id="back-to-home" onclick="goToHome()">home page</div>
 
   <script>
     const canvas = document.getElementById('myCanvas');
@@ -153,6 +164,10 @@
     generateRandomParameters();
 
     setInterval(generateRandomParameters, 1000);
+
+    function goToHome() {
+      window.location.href = 'index.html'; // Redirect to the homepage
+    }
   </script>
 </body>
 </html>
