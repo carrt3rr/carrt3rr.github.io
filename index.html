@@ -38,11 +38,23 @@
       cursor: pointer;
       text-decoration: underline;
     }
+    
+    #artgallery-text {
+      position: absolute;
+      top: 40px;
+      left: 10px;
+      background-color: transparent;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div id="mandelbrot-container">
     <div id="mandelbrot-text" onclick="goToSection('mandelbrot')">mandelbrot generation</div>
+    <div id="artgallery-text" onclick="goToSection('artgallery')">artgallery</div>
     <canvas id="myCanvas"></canvas>
   </div>
 
@@ -51,6 +63,8 @@
       // Your logic for navigating to different sections
       if (sectionId === 'mandelbrot') {
         window.location.href = 'mandelbrot.html'; // Redirect to the Mandelbrot page
+      } else if (sectionId === 'artgallery') {
+        window.location.href = 'artgallerygame.html'; // Redirect to the Art Gallery page
       }
     }
   </script>
