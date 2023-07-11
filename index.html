@@ -42,15 +42,18 @@
 </head>
 <body>
   <div id="mandelbrot-container">
-    <div id="mandelbrot-text" onclick="goToSection('mandelbrot')">mandelbrot generation</div>
+    <div id="mandelbrot-text" onclick="goToSection('mandelbrot')">Mandelbrot</div>
     <canvas id="myCanvas"></canvas>
   </div>
 
-  <script src="mandelbrot.js"></script>
   <script>
     function goToSection(sectionId) {
       // Your logic for navigating to different sections
+      if (sectionId === 'mandelbrot') {
+        window.location.href = 'mandelbrot.html'; // Redirect to the Mandelbrot page
+      }
     }
   </script>
 </body>
 </html>
+
