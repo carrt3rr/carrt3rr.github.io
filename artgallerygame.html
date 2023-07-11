@@ -1,4 +1,42 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    canvas {
+      border: 1px solid #ccc;
+      border-width: 3px;
+      outline: 1px solid #ccc;
+      outline-offset: -4px;
+      margin: 4px;
+    }
+
+    #back-to-home {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+
+  <div id="back-to-home" onclick="goToHome()">home page</div>
+
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -34,6 +72,8 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
-    </script>
-  </body>
-</html>
+      </script>
+      </body>
+      </html>
+      </body>
+      </html>
