@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    canvas {
+      border: 1px solid #ccc;
+      border-width: 3px;
+      outline: 1px solid #ccc;
+      outline-offset: -4px;
+      margin: 4px;
+    }
+
+    #back-to-home {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    #canvas-container {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 30px); /* Subtract the height of the text container */
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+  <div id="back-to-home" onclick="goToHome()">home page</div>
+
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const WIDTH = 800;
+    const HEIGHT = 600;
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+
+    const MAX_ITERATIONS = 1000;
+    const ZOOM_FACTOR = 0.1;
+
+    let REAL_START, REAL_END, IMAGINARY_START, IMAGINARY_END;
+
+    // Rest of your code...
+  </script>
+</body>
+</html>
